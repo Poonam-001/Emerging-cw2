@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--declared targetNamespace-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cw="http://www.cw2.com/catalog_20049412" targetNamespace="http://www.cw2.com/catalog_20049412" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema">
+
+    <!--root element named stores-->
+    <xs:element name="stores">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="store" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+<!--element store-->
+    <xs:complexType name="store">
+        <xs:sequence>
+            <xs:element name="welcome" type="xs:string" />
+            <xs:element name="store_info" />
+            <xs:element name="gift_cards" />
+            <xs:element name="footer" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!--store_info element-->
+    <xs:complexType name="store_info">
+        <xs:sequence>
+            <xs:element name="logo" />
+            <xs:element name="store_name" type="xs:string" />
+            <xs:element name="store_manager" type="xs:string" />
+            <xs:element name="items" />
+            <xs:element name="address" />
+            <xs:element name="telephone_numbers" />
+            <xs:element name="websites" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--store_manager element-->
+    <xs:complexType name="store_manager">
+        <xs:attribute name="title" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!--items element-->
+    <xs:complexType name="items">
+        <xs:sequence>
+            <xs:element name="item" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--item attribute-->
+    <xs:attributeGroup name="item">
+        <xs:attribute name="price" type="xs:decimal" use="required" />
+        <xs:attribute name="quantity" type="xs:integer" use="prohibited" />
+        <xs:attribute name="item_number" type="xs:integer" use="optional" />
+    </xs:attributeGroup>
+
+    <!--address element-->
+    <xs:complexType name="address">
+        <xs:all>
+            <xs:element name="street" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="state" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="zip" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+    </xs:complexType>
+
+    <!--telephone_numbers element-->
+    <xs:complexType name="telephone_numbers">
+        <xs:all>
+            <xs:element name="phone" type="xs:long" minOccurs="0" maxOccurs="1" />
+            <xs:element name="telephone_number" type="xs:long" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+    </xs:complexType>
+
+    <!--footer element-->
+    <xs:complexType name="footer">
+        <xs:all>
+            <xs:element name="text" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="company" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+    </xs:complexType>
+
+    <!--gift_cards element-->
+    <xs:complexType name="gift_cards">
+        <xs:sequence>
+            <xs:element name="c_image" />
+            <xs:element name="card_details" />
+            <xs:element name="validity" />
+            <xs:element name="customer_category" />
+            <xs:element name="number_of_users" type="xs:long" />
+            <xs:element name="discount" type="xs:int" />
+            <xs:element name="phone" type="xs:long" />
+            <xs:element name="features" />
+            <xs:element name="message" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:attributeGroup name="gift_card">
+      <xs:attribute name="id" type="xs:ID" use="required" />
+      <xs:attribute name="card_type" type="xs:string" fixed="digital"/>
+      <xs:attribute name="unique" type="xs:NMTOKEN" use="required" />
+    </xs:attributeGroup>
+
+    <!--card_details element-->
+    <xs:complexType name="card_details">
+        <xs:all>
+            <xs:element name="card_name" type="xs:string" />
+            <xs:element name="cost" type="xs:string" />
+            <xs:element name="type" type="xs:string" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="cost">
+        <xs:attribute name="unit" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="validity">
+        <xs:all>
+            <xs:element name="issue_date" type="xs:date" />
+            <xs:element name="expire_date" type="xs:date" />
+        </xs:all>
+    </xs:complexType>
+
+    <!--customer_category element with attribute-->
+    <xs:complexType name="customer_category">
+        <xs:attribute name="category" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!--feature_number element-->
+    <xs:complexType name="features">
+        <xs:sequence>
+            <xs:element name="heading" type="xs:string" />
+            <xs:element name="feature" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--providing enumeration value to the feature_number element-->
+    <xs:complexType name="feature">
+        <xs:attribute name="feature_number" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:int">
+                    <xs:enumeration value="1" />
+                    <xs:enumeration value="2" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="message">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string" />
+            <xs:element name="description" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--providing enumeration value to the description_number element-->
+    <xs:complexType name="description">
+        <xs:attribute name="description_number" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:int">
+                    <xs:enumeration value="1" />
+                    <xs:enumeration value="2" />
+                    <xs:enumeration value="3" />
+                    <xs:enumeration value="4" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+</xs:schema>

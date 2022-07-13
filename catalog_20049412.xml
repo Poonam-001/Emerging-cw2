@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="catalog_20049412.css" cw:type="text/css"?><!--linked to CSS-->
+<!--
+    Name: Poonam Singh Yadav
+    Londonmet ID: 20049412
+    CollegeID: np01cp4s210213
+    Date: 3/31/2022
+-->
+<!--linked to xsd, css and given the schema location-->
+<cw:stores xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:cw="http://www.cw2.com/catalog_20049412" xs:schemaLocation="http://www.cw2.com/catalog_20049412 catalog_20049412.xsd">
+<!--Complex type because it contains attribute and child element-->
+<cw:store id="s001">
+        <!--Simple type because it contains simple text-->
+        <cw:welcome>Welcome to the Store</cw:welcome>
+        <cw:store_info>
+            <!--Empty element because it does not contain attribute or child element or simple text-->
+            <cw:logo />
+            <cw:store_name>Evergreen Store</cw:store_name>
+            <!--Complex type because it contains attribute and simple text-->
+            <cw:store_manager title="Mr">John Clover</cw:store_manager>
+            <cw:items>
+                <!--entity reference for & symbol-->
+                <item price="$20" quantity="50" item_number="1">Drinks &amp; Snacks</item>
+                <item price="$50" quantity="20" item_number="2">Colors</item>
+                <item price="$100" quantity="25" item_number="3">Jwellery</item>
+                <item price="$30" quantity="35" item_number="4">Petrollium</item>
+            </cw:items>
+            <cw:address>
+                <street>212 East Advent St.</street>
+                <city>Cutler</city>
+                <state>MO</state>
+                <zip>32815</zip>
+            </cw:address>
+            <cw:telephone_numbers>
+                <phone>2043134135</phone>
+                <telephone_number>3423524520</telephone_number>
+            </cw:telephone_numbers>
+            <cw:website>www.evergreen.com</cw:website>
+            <cw:email>evergreenstore2341@gmail.com</cw:email>
+        </cw:store_info>
+
+        <cw:gift_cards>
+            <!--complex type because it contains multiple attributes and child elements-->
+            <cw:gift_card id="GF-C001" card_type="digital" unique_code="32:86-00">
+                <cw:c_image />
+                <cw:card_details>
+                    <cw:card_name>Colouring Course Gift Card</cw:card_name>
+                    <cw:cost unit="$">50.35</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>5-25-2020</cw:issue_date>
+                    <cw:expire_date>5-25-2025</cw:expire_date>
+                </cw:validity>
+                <!--complex type because it contains an attribute-->
+                <cw:customer_category category="VIP"/>
+                <cw:number_of_users>60000</cw:number_of_users>
+                <cw:discount>13</cw:discount>
+                <cw:phone>1057357365</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C002" card_type="digital" unique_code="43:22-55">
+                <cw:cs_image />
+                <cw:card_details>
+                    <cw:card_name>Cosmetics Gift Card</cw:card_name>
+                    <cw:cost unit="$">550</cw:cost>
+                    <cw:type>Credit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>10-20-2020</cw:issue_date>
+                    <cw:expire_date>10-31-2026</cw:expire_date>
+                </cw:validity>
+                <cw:customer_category category=" New"/>
+                <cw:number_of_users>6000</cw:number_of_users>
+                <cw:phone>5173573451</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C003" card_type="digital" unique_code="01:64-35">
+                <cw:j_image />
+                <cw:card_details>
+                    <cw:card_name>Jwellery Gift Card</cw:card_name>
+                    <cw:cost unit="$">600</cw:cost>
+                    <cw:type>Credit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>5-13-2022</cw:issue_date>
+                    <cw:expire_date>3-31-2027</cw:expire_date>
+                </cw:validity>
+                <cw:customer_category category="Regular"/>
+                <cw:number_of_users>80000</cw:number_of_users>
+                <cw:discount>12</cw:discount>
+                <cw:phone>2537350173</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C004" card_type="digital" unique_code="93:39-64">
+                <cw:l_image />
+                <cw:card_details>
+                    <cw:card_name>Leather Gift Card</cw:card_name>
+                    <cw:cost unit="$">95</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>2-15-2021</cw:issue_date>
+                    <cw:expire_date>3-31-2026</cw:expire_date>
+                </cw:validity>
+                <cw:customer_category category="Loyal"/>
+                <cw:number_of_users>70000</cw:number_of_users>
+                <cw:phone>0157356573</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C005" card_type="digital" unique_code="31:03-77">
+                <cw:L_image />
+                <cw:card_details>
+                    <cw:card_name>Liquor Gift Card</cw:card_name>
+                    <cw:cost unit="$">800</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>1-31-2022</cw:issue_date>
+                    <cw:expire_date>3-31-2026</cw:expire_date>
+                </cw:validity>
+                <cw:customer_category category="VIP"/>
+                <cw:number_of_users>40000</cw:number_of_users>
+                <cw:discount>12</cw:discount>
+                <cw:phone>5494173573</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C006" card_type="digital" unique_code="02:43-33">
+                <cw:g_image />
+                <cw:card_details>
+                    <cw:card_name>Gas Gift Card</cw:card_name>
+                    <cw:cost unit="$">700</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>3-23-2022</cw:issue_date>
+                    <cw:expire_date>12-31-2025</cw:expire_date>
+                </cw:validity>
+                <cw:number_of_users>50000</cw:number_of_users>
+                <cw:discount>10</cw:discount>
+                <cw:phone>5547357301</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C007" card_type="digital" unique_code="43:04-17">
+                <cw:p_image />
+                <cw:card_details>
+                    <cw:card_name>Painting Gift Card</cw:card_name>
+                    <cw:cost unit="$">200</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>2-21-2022</cw:issue_date>
+                    <cw:expire_date>9-30-2027</cw:expire_date>
+                </cw:validity>
+                <cw:customer_category category="Regular"/>
+                <cw:number_of_users>5000</cw:number_of_users>
+                <cw:discount>11</cw:discount>
+                <cw:phone>4455173573</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C008" card_type="digital" unique_code="41:24-55">
+                <cw:sk_image />
+                <cw:card_details>
+                    <cw:card_name>SkinDoctor Gift Card</cw:card_name>
+                    <cw:cost unit="$">1000</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>2-28-2022</cw:issue_date>
+                    <cw:expire_date>11-30-2026</cw:expire_date>
+                </cw:validity>
+                <cw:number_of_users>30000</cw:number_of_users>
+                <cw:discount>10</cw:discount>
+                <cw:phone>5733113573</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+
+            <cw:gift_card id="GF-C009" card_type="digital" unique_code="43:43-55">
+                <cw:sb_image />
+                <cw:card_details>
+                    <cw:card_name>StarBucks Gift Card</cw:card_name>
+                    <cw:cost unit="$">500</cw:cost>
+                    <cw:type>Debit</cw:type>
+                </cw:card_details>
+                <cw:validity>
+                    <cw:issue_date>8-28-2022</cw:issue_date>
+                    <cw:expire_date>12-31-2025</cw:expire_date>
+                </cw:validity>
+                <cw:customer_category category="Loyal"/>
+                <cw:number_of_users>90000</cw:number_of_users>
+                <cw:discount>8</cw:discount>
+                <cw:phone>0861573573</cw:phone>
+                <cw:features>
+                    <cw:heading>Features</cw:heading>
+                    <cw:feature feature_number="1"> You can pay with the card to related store.</cw:feature>
+                    <cw:feature feature_number="2"> No need to carry cash and no fear of lost or theft.</cw:feature>
+                </cw:features>
+                <cw:message>
+                    <cw:title>Terms and conditions</cw:title>
+                    <cw:descriptions>
+                        <description description_number="1"> This card is non transferable and will remain the property of the mart.</description>
+                        <description description_number="2"> It must be returned upon request.</description>
+                        <description description_number="3"> In case of lost or theft of the card must be reported immediately.</description>
+                        <description description_number="4"> Please return the card to the related store if found.</description>
+                    </cw:descriptions>
+                </cw:message>
+            </cw:gift_card>
+        </cw:gift_cards>
+
+        <cw:footer>
+            <!--character reference for copyright symbol-->
+            <cw:text> &#169; copyright</cw:text>
+            <!--simple type with simple text-->
+            <cw:company> Evergreen Store</cw:company>
+        </cw:footer>
+    </cw:store>
+
+</cw:stores>

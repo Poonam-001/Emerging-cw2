@@ -1,0 +1,338 @@
+/*
+    Name: Poonam Singh Yadav
+    Date: 3/31/2022
+*/
+
+@namespace cw url(http://www.cw2.com/catalog_20049412);/* placed namespace escape style*/
+
+/* set the following information for styling the XML with CSS*/
+
+/*margin for the store*/
+cw|store, cw\:store{
+    margin: 5px;
+}
+
+/*style for content of store_info*/
+cw|store_info, cw\:store_info{
+    display: block;
+    font-family: Times New Roman; 
+    font-size:12pt;
+    text-align: center;
+    flex-direction: column;
+}
+
+cw|welcome, cw\:welcome{
+    display: block;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    font-style: normal;
+    color: papayawhip;
+    background-color: rgb(62, 93, 203);
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+    animation-name: example;
+    animation-duration: 5s;
+}
+/*style for animation of background color of text welcome*/
+@keyframes example{
+    from {background-color: rgb(62, 93, 203);}
+    to {background-color: pink;}
+}
+
+/*style for logo*/
+cw|logo, cw\:logo{
+    content: url("logo.png");
+    image-orientation: flip;
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+    float: center;
+    border: 10px groove rgb(0, 255, 221);
+    border-radius: 40px;
+}
+
+cw|store_name, cw\:store_name{
+    display: block;
+    font-size: 20pt;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: crimson;
+    padding-top: 10pt;
+    padding-bottom: 5pt;
+    background-color: lightgreen;
+    animation-name: example1;
+    animation-duration: 5s;
+}
+@keyframes example1{
+    from {background-color: lightgreen;}
+    to {background-color: greenyellow;}
+}
+
+cw|store_manager, cw\:store_manager{
+    display: block;
+    font-size: 13pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(37, 220, 20);
+}
+store_manager:before {content: "Store-manager: "; font-weight: bold;}
+
+/*style the item to appear in list*/
+cw|items > item, cw\:items > item{
+    display: list-item;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+/*style for a content to appear infront of items as a title.*/
+items:before {content: "List of Items: " ; font-weight: bold;}
+
+cw|address, cw\:address{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: rgb(10, 10, 23);
+}
+address:before {content: "Address: "; font-weight: bold;}
+
+cw|telephone_numbers, cw\:telephone_numbers{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: rgb(10, 10, 23);
+}
+
+cw|website, cw\:website{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: blue;
+    text-decoration: underline;
+}
+website:before {content: "Website: "; font-weight: bold;}
+
+cw|email, cw\:email{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: blue;
+    text-decoration: underline;
+}
+email:before {content: "E-mail: "; font-weight: bold;}
+
+cw|gift_cards, cw\:gift_cards{
+    width: 90%;
+	min-height: 90vh;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px auto;
+	margin-bottom: 40px;
+}
+
+/*style for giftcards to appear in column*/
+cw|gift_card, cw\:gift_card{
+    width: 300px;
+	display: flex;
+	flex-direction: column;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: aliceblue;
+	border: black solid 3px;
+	border-radius: 0.25rem;
+	font-family: sans-serif;
+}
+
+/*style for image*/
+cw|cs_image, cw\:cs_image{
+    content: url("cosmetics.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+
+cw|card_name, cw\:cardname{
+    display: block;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: fuchsia;
+    padding-top: 10pt;
+    background-color: rgb(220, 235, 135);
+    animation-name: example2;
+    animation-duration: 5s;
+}
+@keyframes example2{
+    from {background-color: rgb(220, 235, 135);}
+    to {background-color: darkcyan;}
+}
+
+cw|cost, cw\:cost{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+cost:after {content: " - cost of card";}
+cost:before {content: "$"}
+
+cw|type, cw\:type{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+type:before {content: "Type: "; font-weight: bold;}
+
+cw|validity > issue_date, cw\:validity > issue_date{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+issue_date:before {content: "Issue-Date: "; font-weight: bold;}
+
+cw|validity > expire_date, cw\:validity > expire_date{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+expire_date:before {content: "Expire-date: "; font-weight: bold;}
+
+cw|number_of_users, cw\:number_of_users{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+number_of_users:before {content: "Total number of users: ";font-weight: bold;}
+
+cw|discount, cw\:discount{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+discount:before {content: "Discount(%): "; font-weight: bold;}
+
+cw|phone, cw\:phone{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+phone:before {content: "Contact number: +1 ";font-weight: bold;}
+
+cw|features > feature , cw\:features > feature{
+    display: list-item;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+
+cw|features > heading , cw\:features > heading{
+    display: block;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color: rgb(120, 31, 203);
+    background-color: rgb(144, 202, 238);
+    animation-name: example3;
+    animation-duration: 5s;
+}
+@keyframes example3{
+    from {background-color: rgb(144, 202, 238);}
+    to {background-color: palevioletred;}
+}
+
+cw|title, cw\:title{
+    display: block;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color: rgb(27, 104, 99);
+    background-color: rgb(194, 144, 238);
+    animation-name: example4;
+    animation-duration: 5s;
+}
+@keyframes example4{
+    from {background-color: rgb(194, 144, 238);}
+    to {background-color: powderblue;}
+}
+
+cw|descriptions > description, cw\:descriptions > description{
+    display: list-item;
+    font-size: 12pt;
+    font-family: 'Times New Roman';
+    color: black;
+}
+
+cw|c_image, cw\:c_image{
+    content: url("coloringcourse.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|j_image, cw\:j_image{
+    content: url("Jwellery.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|l_image, cw\:l_image{
+    content: url("leather.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|L_image, cw\:L_image{
+    content: url("Liquor.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|g_image, cw\:g_image{
+    content: url("gas.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|p_image, cw\:p_image{
+    content: url("painting.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|sk_image, cw\:sk_image{
+    content: url("skindoctor.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+cw|sb_image, cw\:sb_image{
+    content: url("starbucks.png");
+    image-orientation: flip;
+    width: 280px;
+    height: 250px;
+    border: 10px ridge plum;
+}
+
+/*footer style was provided below*/
+cw|footer, cw\:footer{
+    display: list-item;
+    font-size: 9pt;
+    font-family: 'Arial';
+    color: blue;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
